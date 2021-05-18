@@ -1,0 +1,10 @@
+﻿@model Azure.Security.KeyVault.Secrets.KeyVaultSecret
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <p class="lead">My super secret secret: @Model.Value</p>
+    <p><a href="https://github.com/SietseT/dotnet-keyvault-examples" class="btn btn-primary btn-lg" target="_blank">Learn more &raquo;</a></p>
+</div>
