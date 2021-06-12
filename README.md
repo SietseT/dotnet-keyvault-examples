@@ -11,6 +11,13 @@ Contains an example integration of Azure Key Vault in a .NET (Framework) project
 
 ---
 
+# Code 
+In HomeController I've added code to retrieve a secret from the Azure Key Vault:
+```
+var client = new SecretClient(new Uri(ConfigurationManager.AppSettings["Azure.KeyVaultUri"]), new DefaultAzureCredential());
+var secret = await client.GetSecretAsync("mysupersecretsecret");
+```
+
 # Setup
 The example(s) can be found in the `samples` directory.
 
